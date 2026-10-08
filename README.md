@@ -5,7 +5,7 @@ Vercel serverless endpoint `GET /api/burger`. Načte polední menu z https://bee
 Odpověď (JSON):
 
 ```json
-{ "hasBurger": true,  "message": "Ve čtvrtek 8.10. je 🍔 (Burger Kentucky, ...)", "burgers": [{ "date": "2026-10-08", "dish": "..." }] }
+{ "hasBurger": true,  "message": "Burger alert 🍔: ve čtvrtek 8.10. je Burger Kentucky, ...", "burgers": [{ "date": "2026-10-08", "dish": "..." }] }
 { "hasBurger": false, "message": "", "burgers": [] }
 ```
 

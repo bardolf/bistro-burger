@@ -1,7 +1,7 @@
 const SOURCE_URL = 'https://beethoven.breaktimebistro.cz';
 
-// "Ve čtvrtek", "V pondělí" ... indexed by Date.getUTCDay()
-const DAY_PHRASES = ['V neděli', 'V pondělí', 'V úterý', 'Ve středu', 'Ve čtvrtek', 'V pátek', 'V sobotu'];
+// "ve čtvrtek", "v pondělí" ... indexed by Date.getUTCDay()
+const DAY_PHRASES = ['v neděli', 'v pondělí', 'v úterý', 've středu', 've čtvrtek', 'v pátek', 'v sobotu'];
 
 const decodeEntities = (s) =>
   s
@@ -48,7 +48,7 @@ export function formatMessage(burgers) {
   return burgers
     .map(({ date, dish }) => {
       const d = new Date(`${date}T12:00:00Z`);
-      return `${DAY_PHRASES[d.getUTCDay()]} ${d.getUTCDate()}.${d.getUTCMonth() + 1}. je 🍔 (${dish})`;
+      return `Burger alert 🍔: ${DAY_PHRASES[d.getUTCDay()]} ${d.getUTCDate()}.${d.getUTCMonth() + 1}. je ${dish}`;
     })
     .join('\n');
 }
